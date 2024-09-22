@@ -39,6 +39,16 @@ h1 {
         0 0 20px rgba(255, 255, 255, 0.5);
 }
 
+h1:hover {
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.7),  /* Increased glow */
+        0 0 20px rgba(255, 255, 255, 0.7),
+        0 0 30px rgba(255, 255, 255, 0.7),
+        0 0 40px rgba(255, 255, 255, 0.7),
+        0 0 50px rgba(255, 255, 255, 0.7);  /* More intense glow */
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
 @keyframes gradientShift {
     0% {
         background-position: 50% 0%;
