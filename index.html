@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hogue AI offers affordable AI-powered services including video editing, custom jingles, and logo design. Explore our catalog to enhance your projects with AI-driven creativity. Services: Timeline, Jukebox, Twintune. Contact us for custom inquiries!">
+    <title>Hogue AI Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hogue AI</h1>
+
+    <div class="container">
+        <div class="card" data-video="https://youtu.be/SttvZSMU_gQ">
+            <h2>Timeline</h2>
+            <p class="price">$29.99</p>
+            <p>Quality AI video editing services tailored to your needs!</p>
+            <p class="examples">Weddings/Anniversaries/Vacations</p>
+        </div>
+        <div class="card" data-video="https://on.soundcloud.com/hkwy7K972eFPcvcQ9">
+            <h2>Jukebox</h2>
+            <p class="price">$9.99</p>
+            <p>Catchy AI jingle/songs customized for you!</p>
+            <p class="examples">Birthdays/Anniversaries/Education</p>
+        </div>
+        <div class="card" data-video="https://imgur.com/a/sample-3-PJ45pHa">
+            <h2>Twintune</h2>
+            <p class="price">$19.99</p>
+            <p>Turn old everyday photos into a shiny logo!</p>
+            <p class="examples">Businesses/Thumbnails/Merchandise</p>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>Interested in our services? Let's talk!</p>
+        <p>For order inquiries or custom requests, contact us at: <a href="mailto:reeshogue22@gmail.com?subject=Order%20Inquiry&body=Hello%20Hogue%20AI,%0D%0A%0D%0AI%20am%20interested%20in%20learning%20more%20about%20your%20services.%0D%0A%0D%0APlease%20provide%20additional%20information%20at%20your%20earliest%20convenience.%0D%0A%0D%0AThank%20you,%0D%0A%5BYour%20Name%5D">reeshogue22@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+        Designed by Rees Hogue with a 👍
+    </div>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                this.classList.add('glowing');
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 500);
+            });
+        });
+    </script>
+
+    <script>
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+            card.addEventListener('click', function() {
+                var videoUrl = card.getAttribute('data-video');
+                window.open(videoUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
