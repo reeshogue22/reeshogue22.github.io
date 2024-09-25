@@ -19,22 +19,6 @@
 </script>
 
 <body>
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!-- Navigation Menu -->
-    <nav id="menu" class="hidden">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <h1>Hogue AI</h1>
 
     <div class="container">
@@ -88,21 +72,5 @@
             });
         });
     </script>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            var hamburger = document.querySelector('.hamburger');
-    
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                hamburger.classList.add('open');
-            } else {
-                menu.classList.add('hidden');
-                hamburger.classList.remove('open');
-            }
-        }
-    </script>
-
-
 </body>
 </html>
