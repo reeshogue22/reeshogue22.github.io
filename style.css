@@ -20,6 +20,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 1001; /* Ensure it's above other elements */
 }
 
 .hamburger span {
@@ -31,35 +32,55 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hide the Menu by Default */
+/* Menu hidden by default */
 #menu.hidden {
-    display: none;
+    opacity: 0;
+    pointer-events: none; /* Prevent interactions when hidden */
 }
 
-/* Show the Menu when Active */
+/* Show Menu Full-Screen */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with slight transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; /* Fade in */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
 #menu ul {
     list-style: none;
-    padding: 0;
-    margin: 20px 0;
     text-align: center;
 }
 
 #menu ul li {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 #menu ul li a {
     color: #f5f5f5;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 #menu ul li a:hover {
     color: #66b0ff;
-    text-decoration: underline;
 }
 
-/* Style for when the hamburger menu is opened */
+/* Show the menu when it's no longer hidden */
+#menu:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto; /* Enable interactions when visible */
+}
+
+/* Cross (X) Animation for the Hamburger Icon */
 .hamburger.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -71,7 +92,6 @@ body {
 .hamburger.open span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
-
 
 .content {
     display: flex;
