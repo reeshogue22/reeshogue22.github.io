@@ -88,5 +88,21 @@
             });
         });
     </script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            var hamburger = document.querySelector('.hamburger');
+    
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                hamburger.classList.add('open');
+            } else {
+                menu.classList.add('hidden');
+                hamburger.classList.remove('open');
+            }
+        }
+    </script>
+
+
 </body>
 </html>
