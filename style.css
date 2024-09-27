@@ -139,12 +139,13 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d; /* Enable 3D perspective */
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
-                0 0 20px rgba(255, 255, 255, 0.5),
+    transform: scale(1.05) rotateY(10deg) rotateX(5deg); /* Perspective shift */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 255, 255, 0.5), 
                 0 0 30px rgba(255, 255, 255, 0.5);
     animation: glow 1s ease-in-out forwards;
 }
