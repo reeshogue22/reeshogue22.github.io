@@ -119,6 +119,10 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex; /* Add this */
+    flex-direction: column; /* Add this */
+    align-items: center; /* Add this */
+    text-align: center; /* Add this */
 }
 
 .card:hover {
