@@ -23,8 +23,7 @@ body {
 }
 
 h1 {
-    font-size: 4rem;e, I can help brainstorm or experiment with other concepts that might work better for you. What are your thoughts?
-
+    font-size: 4rem;
     font-weight: bold;
     background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00);
     -webkit-background-clip: text;
@@ -134,7 +133,7 @@ p {
     }
 }
 
-h2 {
+.card h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     background: linear-gradient(90deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00);
