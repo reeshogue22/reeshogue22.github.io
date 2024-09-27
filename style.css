@@ -13,6 +13,17 @@ body {
     user-select: none;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -41,12 +52,12 @@ h1 {
 
 h1:hover {
     text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.7),  /* Increased glow */
+        0 0 10px rgba(255, 255, 255, 0.7),
         0 0 20px rgba(255, 255, 255, 0.7),
         0 0 30px rgba(255, 255, 255, 0.7),
         0 0 40px rgba(255, 255, 255, 0.7),
-        0 0 50px rgba(255, 255, 255, 0.7);  /* More intense glow */
-    transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
+        0 0 50px rgba(255, 255, 255, 0.7);
+    transition: text-shadow 0.3s ease-in-out;
 }
 
 @keyframes gradientShift {
@@ -123,8 +134,8 @@ p {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                0 0 20px rgba(255, 255, 255, 0.5), 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.5),
                 0 0 30px rgba(255, 255, 255, 0.5);
     animation: glow 1s ease-in-out forwards;
 }
