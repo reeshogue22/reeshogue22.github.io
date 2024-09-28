@@ -186,7 +186,7 @@ p {
 a {
     font-size: 1rem;
     color: #66b0ff;
-    text-decoration: none;
+    text-decoration: none;.contact {
     font-weight: bold;
 }
 
@@ -211,7 +211,7 @@ a:active {
     background-color: #1e1e1e; /* Same as the card background */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Same shadow as cards */
     border-radius: 10px; /* Rounded corners */
-    margin: 15px;
+    margin: 15px auto;
     padding: 20px;
     width: 50%;
     text-align: center;
