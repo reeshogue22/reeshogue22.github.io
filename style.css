@@ -220,9 +220,10 @@ a:active {
     text-decoration: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     position: fixed;
-    bottom: 100px; /* Adjust distance from the footer */
+    bottom: 80px;  /* Adjust to position above the footer */
     right: 30px;   /* Adjust distance from the right edge */
-    z-index: 1000; /* Ensure it stays above other elements */
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adds shadow for better visibility */
 }
 
 .contact-button:hover {
