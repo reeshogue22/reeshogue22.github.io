@@ -40,7 +40,9 @@ h1 {
 }
 
 h1:hover {
-    text-shadow:
+    text-shadow:Setting up libmagickwand-6.q16-7t64:amd64 (8:6.9.12.98+dfsg1-5.2build2) ...
+Setting up libgtksourceview-4-0:amd64 (4.8.4-5build4) ...
+
         0 0 10px rgba(255, 255, 255, 0.7),  /* Increased glow */
         0 0 20px rgba(255, 255, 255, 0.7),
         0 0 30px rgba(255, 255, 255, 0.7),
@@ -184,20 +186,6 @@ p {
     margin-bottom: 10px;
 }
 
-a {
-    font-size: 1rem;
-    color: #66b0ff;
-    text-decoration: none;.contact {
-    font-weight: bold;
-}
-
-a:hover,
-a:focus,
-a:active {
-    text-decoration: underline;
-    animation: glowUp 0.5s ease-in-out forwards;
-}
-
 .contact-button {
     position: fixed; /* Fixed to the screen */
     bottom: 20px; /* Distance from the bottom */
@@ -206,7 +194,7 @@ a:active {
     color: white; /* White text */
     padding: 15px 30px; /* Padding for a larger button */
     border-radius: 50px; /* Rounded button */
-    font-size: 1.2rem; /* Larger text */
+    font-size: 4rem; /* Larger text */
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -221,16 +209,6 @@ a:active {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
                 0 0 20px rgba(255, 255, 255, 0.5), 
                 0 0 30px rgba(255, 255, 255, 0.5);
-}
-
-@keyframes glowUp {
-    0% {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Same shadow as cards */
-        text-shadow: none;
-    }
-    100% {
-        text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
-    }
 }
 
 .footer {
