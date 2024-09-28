@@ -206,11 +206,30 @@ a:active {
     }
 }
 
-.contact {
-    font-size: 1rem;
-    color: #cccccc;
-    margin-bottom: 80px;
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007aff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    bottom: 100px; /* Adjust distance from the footer */
+    right: 30px;   /* Adjust distance from the right edge */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.contact-button:hover {
+    background-color: #005bb5;
+    box-shadow: 0 0 10px rgba(0, 122, 255, 0.5), 
+                0 0 20px rgba(0, 122, 255, 0.5),
+                0 0 30px rgba(0, 122, 255, 0.5);
 }
 
 .footer {
