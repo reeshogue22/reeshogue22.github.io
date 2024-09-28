@@ -1,3 +1,7 @@
+.contact {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 80px;
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -205,14 +209,13 @@ a:active {
         text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
     }
 }
-
 .contact-button {
     display: inline-block;
-    padding: 15px 30px;
-    background-color: #007aff;
+    padding: 12px 25px; /* Slightly reduced padding */
+    background-color: #6c757d; /* Soft grey for a neutral look */
     color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem; /* Slightly smaller font size */
+    font-weight: normal; /* Normal font weight */
     text-transform: uppercase;
     text-align: center;
     border: none;
@@ -220,18 +223,18 @@ a:active {
     text-decoration: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     position: fixed;
-    bottom: 80px;  /* Adjust to position above the footer */
-    right: 30px;   /* Adjust distance from the right edge */
-    z-index: 1000; /* Ensures it stays above other elements */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adds shadow for better visibility */
+    bottom: 80px;  /* Position above the footer */
+    right: 30px;   /* Position to the right */
+    z-index: 1000; /* Keeps it above other elements */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .contact-button:hover {
-    background-color: #005bb5;
-    box-shadow: 0 0 10px rgba(0, 122, 255, 0.5), 
-                0 0 20px rgba(0, 122, 255, 0.5),
-                0 0 30px rgba(0, 122, 255, 0.5);
+    background-color: #5a6268; /* Slightly darker grey on hover */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3), 
+                0 0 16px rgba(0, 0, 0, 0.3); /* Softer hover glow */
 }
+
 
 .footer {
     font-size: 0.9rem;
