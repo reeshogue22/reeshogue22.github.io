@@ -40,17 +40,14 @@ h1 {
 }
 
 h1:hover {
-    text-shadow:Setting up libmagickwand-6.q16-7t64:amd64 (8:6.9.12.98+dfsg1-5.2build2) ...
-Setting up libgtksourceview-4-0:amd64 (4.8.4-5build4) ...
-
+    text-shadow:
         0 0 10px rgba(255, 255, 255, 0.7),  /* Increased glow */
         0 0 20px rgba(255, 255, 255, 0.7),
         0 0 30px rgba(255, 255, 255, 0.7),
         0 0 40px rgba(255, 255, 255, 0.7),
         0 0 50px rgba(255, 255, 255, 0.7);  /* More intense glow */
     transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
-}ub.io
-
+}
 
 @keyframes gradientShift {
     0% {
@@ -186,29 +183,34 @@ p {
     margin-bottom: 10px;
 }
 
-.contact-button {
-    position: fixed; /* Fixed to the screen */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    background-color: #007aff; /* Blue background */
-    color: white; /* White text */
-    padding: 15px 30px; /* Padding for a larger button */
-    border-radius: 50px; /* Rounded button */
-    font-size: 4rem; /* Larger text */
-    font-weight: bold;
-    text-align: center;
+a {
+    font-size: 1rem;
+    color: #66b0ff;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-    z-index: 1000; /* Ensure it's above other elements */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    font-weight: bold;
 }
 
-.contact-button:hover {
-    background-color: #ff2d55; /* Change color on hover */
-    transform: scale(1.1); /* Slightly increase size on hover */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                0 0 20px rgba(255, 255, 255, 0.5), 
-                0 0 30px rgba(255, 255, 255, 0.5);
+a:hover,
+a:focus,
+a:active {
+    text-decoration: underline;
+    animation: glowUp 0.5s ease-in-out forwards;
+}
+
+@keyframes glowUp {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
+    }
+}
+
+.contact {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
 .footer {
@@ -219,8 +221,7 @@ p {
     background-color: #1a1a1a;
     width: 100%;
     position: fixed;
-    bottom: 0; /* Ensures it sticks to the bottom */
-    left: 0;
+    bottom: 0;
     z-index: 10;
 }
 
