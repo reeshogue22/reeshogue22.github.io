@@ -23,6 +23,7 @@ body {
 }
 
 h1 {
+    font-family: 'Pacifico', cursive;
     font-size: 4rem;
     font-weight: bold;
     background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00);
