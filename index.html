@@ -23,23 +23,28 @@
     <h1>Hogue AI</h1>
 
     <div class="container">
-        <div class="card" data-video="https://youtu.be/SttvZSMU_gQ">
+        <div class="card" id="card1">
             <h2>Timeline</h2>
             <p class="price">$29.99</p>
             <p>Quality AI video editing services tailored for you!</p>
             <p class="examples">Weddings/Anniversaries/Vacations</p>
+            <div class="embed-container"></div> <!-- Placeholder for YouTube embed -->
         </div>
-        <div class="card" data-video="https://on.soundcloud.com/hkwy7K972eFPcvcQ9">
+    
+        <div class="card" id="card2">
             <h2>Jukebox</h2>
             <p class="price">$9.99</p>
             <p>Catchy AI jingle/songs customized for you!</p>
             <p class="examples">Birthdays/Anniversaries/Education</p>
+            <div class="embed-container"></div> <!-- Placeholder for SoundCloud embed -->
         </div>
-        <div class="card" data-video="https://imgur.com/a/sample-3-PJ45pHa">
+    
+        <div class="card" id="card3">
             <h2>Twintune</h2>
             <p class="price">$19.99</p>
             <p>Turn old everyday photos into a shiny logo!</p>
             <p class="examples">Businesses/Thumbnails/Merchandise</p>
+            <div class="embed-container"></div> <!-- Placeholder for Imgur embed -->
         </div>
     </div>
 
@@ -62,13 +67,27 @@
     </script>
 
     <script>
-        var cards = document.querySelectorAll('.card');
-        cards.forEach(function(card) {
-            card.addEventListener('click', function() {
-                var videoUrl = card.getAttribute('data-video');
-                window.open(videoUrl, '_blank');
-            });
-        });
+    // Add event listeners to each card
+    document.getElementById('card1').addEventListener('click', function() {
+        var embedContainer = this.querySelector('.embed-container');
+        if (!embedContainer.innerHTML) { // Only load the embed if it's not already loaded
+            embedContainer.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/SttvZSMU_gQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+        }
+    });
+    
+    document.getElementById('card2').addEventListener('click', function() {
+        var embedContainer = this.querySelector('.embed-container');
+        if (!embedContainer.innerHTML) { // Only load the embed if it's not already loaded
+            embedContainer.innerHTML = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/hkwy7K972eFPcvcQ9"></iframe>';
+        }
+    });
+    
+    document.getElementById('card3').addEventListener('click', function() {
+        var embedContainer = this.querySelector('.embed-container');
+        if (!embedContainer.innerHTML) { // Only load the embed if it's not already loaded
+            embedContainer.innerHTML = '<blockquote class="imgur-embed-pub" lang="en" data-id="a/sample-3-PJ45pHa"><a href="//imgur.com/a/sample-3-PJ45pHa">View on Imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>';
+        }
+    });
     </script>
 </body>
 </html>
