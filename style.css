@@ -86,7 +86,9 @@ p {
     color: #cccccc;
     margin-bottom: 30px;
     text-align: center;
-}.container {
+}
+
+.container {
     width: 90%;
     margin: 50px auto;
     display: flex;
@@ -116,11 +118,12 @@ p {
     padding: 20px;
     width: 30%;
     box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; /* Transition height smoothly */
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Allow for content to stack vertically */
+    flex-direction: column; /* Stack content vertically */
+    min-height: 350px; /* Ensure uniform closed card height */
 }
 
 .card:hover {
@@ -132,18 +135,16 @@ p {
 }
 
 .embed-content {
-    display: none; /* Hide the embed content by default */
+    display: none; /* Keep hidden by default */
 }
 
 .card.open .embed-content {
-    display: block; /* Show the embed content when the card is opened */
-    flex-grow: 1; /* Allow the content to expand */
+    display: block; /* Show content when the card is opened */
 }
 
 .card.open {
-    height: auto; /* Let the height adjust dynamically based on content */
+    height: auto; /* Let card grow based on content */
 }
-
 
 @keyframes glow {
     0% {
