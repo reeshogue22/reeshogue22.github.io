@@ -70,12 +70,16 @@
     </script>
 
     <script>
-    var cards = document.querySelectorAll('.card');
+var cards = document.querySelectorAll('.card');
 cards.forEach(function(card) {
     card.addEventListener('click', function() {
         var embedContent = card.querySelector('.embed-content');
         if (embedContent) {
-            embedContent.style.display = 'block'; // Show the embed content
+            if (embedContent.style.display === 'block') {
+                embedContent.style.display = 'none'; // Hide the embed content
+            } else {
+                embedContent.style.display = 'block'; // Show the embed content
+            }
         }
     });
 });
