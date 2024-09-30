@@ -86,13 +86,12 @@ p {
     color: #cccccc;
     margin-bottom: 30px;
     text-align: center;
-}
-
-.container {
+}.container {
     width: 90%;
     margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between; /* Ensure equal spacing */
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     margin-bottom: 100px; /* Add some space at the bottom */
@@ -117,9 +116,11 @@ p {
     padding: 20px;
     width: 30%;
     box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Allow for content to stack vertically */
 }
 
 .card:hover {
@@ -133,6 +134,16 @@ p {
 .embed-content {
     display: none; /* Hide the embed content by default */
 }
+
+.card.open .embed-content {
+    display: block; /* Show the embed content when the card is opened */
+    flex-grow: 1; /* Allow the content to expand */
+}
+
+.card.open {
+    height: auto; /* Let the height adjust dynamically based on content */
+}
+
 
 @keyframes glow {
     0% {
