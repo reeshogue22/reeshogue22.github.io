@@ -59,7 +59,7 @@
 
     <script>
         document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function(event) {
+            link.addEventListener('click', function(event) {hen opened. Let me know how this works for your setup!
                 event.preventDefault();
                 this.classList.add('glowing');
                 setTimeout(() => {
@@ -74,15 +74,21 @@ var cards = document.querySelectorAll('.card');
 cards.forEach(function(card) {
     card.addEventListener('click', function() {
         var embedContent = card.querySelector('.embed-content');
-        if (embedContent) {
-            if (embedContent.style.display === 'block') {
-                embedContent.style.display = 'none'; // Hide the embed content
-            } else {
-                embedContent.style.display = 'block'; // Show the embed content
-            }
+
+        // Toggle visibility for the clicked card only
+        if (embedContent.style.display === 'block') {
+            embedContent.style.display = 'none'; // Hide the embed content
+        } else {
+            // Hide all other card contents before showing the current one
+            document.querySelectorAll('.embed-content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            embedContent.style.display = 'block'; // Show the embed content for the clicked card
         }
     });
 });
+
     </script>
 </body>
 </html>
