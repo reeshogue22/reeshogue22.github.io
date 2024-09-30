@@ -133,6 +133,13 @@ p {
 .embed-content {
     display: none; /* Hide the embed content by default */
 }
+
+
+.embed-content img {
+    max-width: 100%; /* Make sure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
 @keyframes glow {
     0% {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
