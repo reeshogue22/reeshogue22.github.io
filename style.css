@@ -144,11 +144,11 @@ p {
                  0 0 20px rgba(255, 255, 255, 0.5);
 }
 
-.card img {
-    display: block;
-    margin: 0 auto;
+.card .embed-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .price {
     margin-bottom: 15px;
 }
