@@ -176,21 +176,6 @@ p {
     margin-bottom: 10px;
 }
 
-.card::after {
-    content: attr(data-action);
-    display: block;
-    text-align: center;
-    color: #ffffff;
-    font-size: 1rem;
-    margin-top: 10px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.card:hover::after {
-    opacity: 1; /* Emphasize the text on hover (for non-touch devices) */
-}
-
 a {
     font-size: 1rem;
     color: #66b0ff;
