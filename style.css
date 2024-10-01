@@ -149,6 +149,13 @@ p {
     justify-content: center;
     align-items: center;
 }
+
+.card .embed-content img {
+    width: 100%;      /* Ensures the image scales to the width of the container */
+    height: auto;     /* Maintains the aspect ratio */
+    max-width: 300px; /* Set a max-width to prevent the image from becoming too large */
+}
+
 .price {
     margin-bottom: 15px;
 }
