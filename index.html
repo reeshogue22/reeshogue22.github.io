@@ -74,23 +74,5 @@ If you are interested in joining me on this wild ride, email me at reeshogue22@g
         });
     </script>
 
-    <script>
-var cards = document.querySelectorAll('.card');
-cards.forEach(function(card) {
-    card.addEventListener('click', function() {
-        var embedContent = card.querySelector('.embed-content');
-
-        // Toggle the clicked card's embed content
-        if (embedContent.style.display === 'block') {
-            embedContent.style.display = 'none'; // Hide if already open
-            card.classList.remove('open'); // Reset height for closed state
-        } else {
-            embedContent.style.display = 'block'; // Show if hidden
-            card.classList.add('open'); // Adjust height for open state
-        }
-    });
-});
-
-    </script>
 </body>
 </html>
