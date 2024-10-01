@@ -92,5 +92,23 @@ cards.forEach(function(card) {
 });
 
     </script>
+
+    <script>
+function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(function(card) {
+        if (isTouchDevice()) {
+            card.setAttribute('data-action', 'Tap to view content');
+        } else {
+            card.setAttribute('data-action', 'Click to view content');
+        }
+    });
+});
+
+    </script>
 </body>
 </html>
