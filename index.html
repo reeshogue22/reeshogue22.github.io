@@ -40,7 +40,7 @@ If you are interested in joining me on this wild ride, email me at reeshogue22@g
         <div class="card">
            <h2>Jukebox</h2>
            <p class="price">$9.99</p>
-           <p>Catchy AI jingle/songs customized for you!</p>
+           <p>Catchy AI jingles/songs customized for you!</p>
            <div class="embed-content">
                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1921052411%3Fsecret_token%3Ds-HrjKY2YhThC&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
            </div>
@@ -59,7 +59,7 @@ If you are interested in joining me on this wild ride, email me at reeshogue22@g
     <a href="mailto:reeshogue22@gmail.com?subject=Order%20Inquiry" class="contact-button">Contact Us</a>
     
     <div class="footer">
-        Designed by Rees Hogue with a 👍
+        Designed by Rees Hogue with a 👍.
     </div>
 
     <script>
@@ -87,24 +87,6 @@ cards.forEach(function(card) {
         } else {
             embedContent.style.display = 'block'; // Show if hidden
             card.classList.add('open'); // Adjust height for open state
-        }
-    });
-});
-
-    </script>
-
-    <script>
-function isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(function(card) {
-        if (isTouchDevice()) {
-            card.setAttribute('data-action', 'Tap to view content');
-        } else {
-            card.setAttribute('data-action', 'Click to view content');
         }
     });
 });
